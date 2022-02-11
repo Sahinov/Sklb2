@@ -20,7 +20,18 @@ violator_songs_list = [
 # Обратите внимание, что делать много вычислений внутри print() - плохой стиль.
 # Лучше заранее вычислить необходимое, а затем в print(xxx, yyy, zzz)
 
-# TODO здесь ваш код
+ind_halo = violator_songs_list.index(['Halo', 4.9])
+leng_halo = violator_songs_list[ind_halo][1]
+
+ind_enjoy = violator_songs_list.index(['Enjoy the Silence', 4.20])
+leng_enjoy = violator_songs_list[ind_enjoy][1]
+
+ind_clean = violator_songs_list.index(['Clean', 5.83])
+leng_clean = violator_songs_list[ind_clean][1]
+
+vremya_pesen = leng_clean + leng_enjoy + leng_halo
+
+print('Три песни звучат ', vremya_pesen, ' минут')
 
 # Есть словарь песен группы Depeche Mode
 violator_songs_dict = {
