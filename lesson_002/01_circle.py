@@ -35,7 +35,10 @@ print(rasst < radius)
 point_2 = (30, 30)
 # Если точка point_2 лежит внутри круга (radius = 42), то выведите на консоль True,
 # Или False, если точка лежит вовне круга.
-# TODO здесь ваш код
+rasst_2 = (point_2[0] ** 2 + point_2[1] ** 2) ** .5
+
+print(rasst_2)
+print(rasst_2 < radius)
 
 # Пример вывода на консоль:
 #
