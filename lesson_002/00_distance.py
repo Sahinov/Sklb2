@@ -18,16 +18,25 @@ lon = sites['London']
 par = sites['Paris']
 
 mos_lon = ((mos[0]-lon[0])**2 + (mos[1]-lon[1])**2)**0.5
-
 mos_par = ((mos[0]-par[0])**2 + (mos[1]-par[1])**2)**0.5
-
 lon_par = ((lon[0]-par[0])**2 + (lon[1]-par[1])**2)**0.5
 
+distances['Moscow'] = {}
+distances['Moscow']['London'] = mos_lon
+distances['Moscow']['Paris'] = mos_par
 
-distances = {'Distance from Moscow to London ': mos_lon,
-             'Distance from Moscow to Paris ': mos_par,
-             'Distance from Paris to London ': lon_par}
-print(distances)
+distances['London'] = {}
+distances['London']['Moscow'] = mos_lon
+distances['London']['Paris'] = lon_par
+
+distances['Paris'] = {}
+distances['Paris']['London'] = lon_par
+distances['Paris']['Moscow'] = mos_par
+
+#distances = {'Distance from Moscow to London ': mos_lon,
+ #            'Distance from Moscow to Paris ': mos_par,
+  #           'Distance from Paris to London ': lon_par}
+pprint(distances)
 
 
 
