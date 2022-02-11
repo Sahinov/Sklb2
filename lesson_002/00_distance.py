@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
+from pprint import pprint
 # Есть словарь координат городов
 
 sites = {
@@ -13,10 +13,22 @@ sites = {
 # расстояние на координатной сетке - корень из (x1 - x2) ** 2 + (y1 - y2) ** 2
 
 distances = {}
+mos = sites['Moscow']
+lon = sites['London']
+par = sites['Paris']
 
-# TODO здесь заполнение словаря
+mos_lon = ((mos[0]-lon[0])**2 + (mos[1]-lon[1])**2)**0.5
 
+mos_par = ((mos[0]-par[0])**2 + (mos[1]-par[1])**2)**0.5
+
+lon_par = ((lon[0]-par[0])**2 + (lon[1]-par[1])**2)**0.5
+
+
+distances = {'Distance from Moscow to London ': mos_lon,
+             'Distance from Moscow to Paris ': mos_par,
+             'Distance from Paris to London ': lon_par}
 print(distances)
+
 
 
 
