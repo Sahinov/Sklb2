@@ -33,6 +33,8 @@ vremya_pesen = leng_clean + leng_enjoy + leng_halo
 
 print('Три песни звучат ', vremya_pesen, ' минут')
 
+print(violator_songs_list[3][0])
+
 # Есть словарь песен группы Depeche Mode
 violator_songs_dict = {
     'World in My Eyes': 4.76,
@@ -49,4 +51,15 @@ violator_songs_dict = {
 # распечатайте общее время звучания трех песен: 'Sweetest Perfection', 'Policy of Truth' и 'Blue Dress'
 #   А другие три песни звучат ХХХ минут
 
-# TODO здесь ваш код
+obshee_vremya = violator_songs_dict['Sweetest Perfection'] + \
+                violator_songs_dict['Policy of Truth'] + \
+                violator_songs_dict['Blue Dress']
+
+print('общее время звучания трех песен ', obshee_vremya)
+
+
+obshee_vremya1 =violator_songs_dict['Clean'] + \
+                violator_songs_dict['Enjoy the Silence'] + \
+                violator_songs_dict['Waiting for the Night']
+
+print('общее время звучания других трех песен ', obshee_vremya1)
